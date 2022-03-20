@@ -2,22 +2,25 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>kafka-demo</artifactId>
+        <groupId>org.feather</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.feather</groupId>
-    <artifactId>kafka-demo</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>demo-01-producer-consumer</module>
-        <module>demo-05-kafka-customerSerializer</module>
-        <module>demo-06-kafka-customerPartitioner</module>
-        <module>demo-07-customerInterceptor</module>
-    </modules>
-    <packaging>pom</packaging>
+    <artifactId>demo-07-customerInterceptor</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+    </dependencies>
 
 </project>
